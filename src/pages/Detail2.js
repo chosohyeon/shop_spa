@@ -17,13 +17,13 @@ const Detail = ({ list }) => {
 
     return (
         <>
-            <img src={process.env.PUBLIC_URL + match.img} alt="" />
+            <img src={match.img_link} onError={e => e.target.src = process.env.PUBLIC_URL + '/assets/images/main_m01.jpg'} alt="" />
             <li>{match.name}</li>
-            <li>{match.des.substring(0, 2)}</li>
-            <li>{match.price} 원</li>
+            <li>{match.description.substring(0, 30)}...</li>
+            <li>{match.price}</li>
             <ul>
                 {
-                    match.color.map(color => <li style={{ ...liStyle, background: color }}>color</li>)
+                    match.color.map(color => <li style={{ ...liStyle, background: color.hex_value }}>color</li>)
                 }
             </ul>
         </>
