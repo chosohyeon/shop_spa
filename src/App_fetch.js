@@ -5,10 +5,10 @@ import Detail from './pages/Detail';
 
 const App = () => {
   const [con, setCon] = useState();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(false);
+    setLoading(false)
     fetch(process.env.PUBLIC_URL + '/data.json')
       .then(res => res.json())
       .then(res => {
