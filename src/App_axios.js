@@ -6,14 +6,14 @@ import axios from 'axios';
 
 const App = () => {
   const [con, setCon] = useState();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const url = process.env.PUBLIC_URL + '/data.json';
   useEffect(() => {
     setLoading(false);
     const getData = async () => {
       const res = await axios.get(url);
       setCon(res.data);
-      setLoading(true);
+      setLoading(true)
     }
     getData();
     // axios(url).then(res => {

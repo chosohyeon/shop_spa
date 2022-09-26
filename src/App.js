@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const App = () => {
   const [con, setCon] = useState();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(false);
@@ -33,7 +33,7 @@ const App = () => {
           loading ? <div>
             <Routes>
               <Route path='/' element={
-                con.map(it => {
+                con.map((it, idx) => {
                   return (
                     <div key={it.id}>
                       <Link to={"/list/" + it.id}>
