@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "name": "제품명01",
+        "des": "제품설명01",
+        "img": "assets/images/mian_m01.jpg",
+        "color": [
+            "#f00",
+            "#ff0",
+            "#369"
+        ],
+        "price": 1000
+    },
+    {
+        "id": 2,
+        "name": "제품명02",
+        "des": "제품설명02",
+        "img": "assets/images/mian_m02.jpg",
+        "color": [
+            "#ff0",
+            "#f00",
+            "#ddd",
+            "#333"
+        ],
+        "price": 2000
+    },
+    {
+        "id": 3,
+        "name": "제품명03",
+        "des": "제품설명03",
+        "img": "assets/images/mian_m03.jpg",
+        "color": [
+            "#ddd",
+            "#333",
+            "#000"
+        ],
+        "price": 1500
+    }
+]
