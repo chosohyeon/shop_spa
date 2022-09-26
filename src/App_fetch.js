@@ -8,7 +8,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(false)
+    setLoading(false);
     fetch(process.env.PUBLIC_URL + '/data.json')
       .then(res => res.json())
       .then(res => {

@@ -9,11 +9,11 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(false)
+    setLoading(false);
     const url = 'https://desipossa.github.io/shop_cra/assets/data.json';
     const getData = async () => {
       const res = await axios.get(url);
-      const newdata = res.data.slice(0, 100);
+      const newdata = res.data.slice(50, 150);
       setCon(newdata);
       setLoading(true);
       //console.log(res.data)
@@ -37,6 +37,8 @@ const App = () => {
                   return (
                     <div key={it.id}>
                       <Link to={"/list/" + it.id}>
+                        {idx}
+                        <img src={it.image_link} onError={e => e.target.src = process.env.PUBLIC_URL + '/assets/images/main_m01.jpg'} alt="" style={{ width: '100px' }} /><br />
                         {it.name}
                       </Link>
                     </div>

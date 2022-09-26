@@ -9,7 +9,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const url = process.env.PUBLIC_URL + '/data.json';
   useEffect(() => {
-    setLoading(false)
+    setLoading(false);
     const getData = async () => {
       const res = await axios.get(url);
       setCon(res.data);
